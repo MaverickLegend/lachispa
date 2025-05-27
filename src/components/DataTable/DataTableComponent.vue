@@ -1,14 +1,8 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { useDataflowStore } from '../../store/useDataflowStore';
-import { createLogger } from 'vite';
 
 const dataflowStore = useDataflowStore();
-const handleCodeList = (structure: string, agencyID: string) => {
-    console.log(structure);
-    console.log(agencyID);
-    dataflowStore.getCodelistsFromDSD(agencyID, structure)
-}
 
 onMounted(() => {
     dataflowStore.fetchDataflows();
