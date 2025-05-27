@@ -5,7 +5,6 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const dataflowStore = useDataflowStore();
-const name = route.params.name as string;
 
 const fetchData = async () => {
     await dataflowStore.getDataById(
@@ -28,9 +27,7 @@ watch(
 <template>
     <div class="container mx-auto p-4">
         <div class="flex justify-between items-center mb-6">
-            <h2 class="text-xl font-bold">
-                Datos de: {{ name }}
-            </h2>
+
             <router-link to="/" class="btn btn-outline btn-ghost">
                 Volver a lista
             </router-link>

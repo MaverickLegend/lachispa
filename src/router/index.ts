@@ -9,19 +9,19 @@ const router = createRouter({
       component: () => import("../views/HomeView.vue"),
     },
     {
-      path: "/dataflow/:agencyId/:id/:version/:name",
+      path: "/dataflow/:agencyId/:id/:version",
       name: "dataflow-detail",
       component: () => import("../components/DataShowComponent.vue"),
       props: true,
     },
     {
-      path: "/dsd/:agencyId/:id",
+      path: "/dsd/detail/:agencyId/:id",
       name: "dsd-detail",
       component: () => import("../components/DataStructureComponent.vue"),
       props: true,
     },
     {
-      path: "/dsd/:agencyId/codelist/:structure",
+      path: "/dsd/codelist/:agencyId/:structure",
       name: "dsd-codelist",
       component: () => import("../components/CodeListComponent.vue"),
       props: true,

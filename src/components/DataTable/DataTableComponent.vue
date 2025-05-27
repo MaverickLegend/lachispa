@@ -50,7 +50,6 @@ onMounted(() => {
                             <router-link :to="{
                                 name: 'dataflow-detail',
                                 params: {
-                                    name: item.name,
                                     agencyId: item.agencyID,
                                     id: item.id,
                                     version: item.version
