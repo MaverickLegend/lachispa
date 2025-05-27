@@ -1,7 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import DataStructureComponent from "../components/DataStructureComponent.vue";
-import DataShowComponent from "../components/DataShowComponent.vue";
-import CodeListComponent from "../components/CodeListComponent.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -14,19 +11,19 @@ const router = createRouter({
     {
       path: "/dataflow/:agencyId/:id/:version/:name",
       name: "dataflow-detail",
-      component: () => DataShowComponent,
+      component: () => import("../components/DataShowComponent.vue"),
       props: true,
     },
     {
       path: "/dsd/:agencyId/:id",
       name: "dsd-detail",
-      component: () => DataStructureComponent,
+      component: () => import("../components/DataStructureComponent.vue"),
       props: true,
     },
     {
       path: "/dsd/:agencyId/codelist/:structure",
       name: "dsd-codelist",
-      component: () => CodeListComponent,
+      component: () => import("../components/CodeListComponent.vue"),
       props: true,
     },
   ],
