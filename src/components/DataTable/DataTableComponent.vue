@@ -63,10 +63,8 @@ onMounted(() => {
                             <router-link :to="{
                                 name: 'dsd-codelist',
                                 params: {
-                                    name: item.name,
                                     agencyId: item.agencyID,
-                                    version: item.version,
-                                    structure: item.structure,
+                                    structure: item.structure
                                 }
                             }" class="btn btn-secondary btn-sm">
                                 Ver

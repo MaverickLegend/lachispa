@@ -24,7 +24,7 @@ const router = createRouter({
       props: true,
     },
     {
-      path: "/dsd/:agencyId/:structure",
+      path: "/dsd/:agencyId/codelist/:structure",
       name: "dsd-codelist",
       component: () => CodeListComponent,
       props: true,
