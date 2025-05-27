@@ -6,16 +6,16 @@ import { useDataflowStore } from '../store/useDataflowStore';
 const route = useRoute();
 const dataflowStore = useDataflowStore();
 
-const fetchData = () => {
-    dataflowStore.getCodelistsFromDSD(
+const fetchData = async () => {
+    await dataflowStore.getCodelistsFromDSD(
         route.params.agencyId as string,
         route.params.structure as string,
     );
-    dataflowStore.getAllCodeList()
+    await dataflowStore.getAllCodeList()
 };
 
-onMounted(() => {
-    fetchData();
+onMounted(async () => {
+    await fetchData();
 });
 </script>
 

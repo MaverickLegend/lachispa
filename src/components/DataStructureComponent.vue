@@ -6,14 +6,16 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 const dataflowStore = useDataflowStore();
 
-const fetchData = () => {
-    dataflowStore.getDSDbyId(
+const fetchData = async () => {
+    await dataflowStore.getDSDbyId(
         route.params.agencyId as string,
-        route.params.id as string,
+        route.params.id as string
     );
 };
 
-onMounted(fetchData);
+onMounted(async () => {
+    await fetchData();
+});
 
 // Recargar cuando cambien los parámetros
 watch(

@@ -110,7 +110,7 @@ export const useDataflowStore = defineStore("dataflow", () => {
   }
 
   async function getAllCodeList() {
-    allCodelistLoading.value = false;
+    allCodelistLoading.value = true;
     allCodelistError.value = null;
     try {
       const { data } = await dataflowApi.get("/codelist/CL01");

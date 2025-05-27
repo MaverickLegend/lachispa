@@ -7,15 +7,17 @@ const route = useRoute();
 const dataflowStore = useDataflowStore();
 const name = route.params.name as string;
 
-const fetchData = () => {
-    dataflowStore.getDataById(
+const fetchData = async () => {
+    await dataflowStore.getDataById(
         route.params.agencyId as string,
         route.params.id as string,
         route.params.version as string,
     );
 };
 
-onMounted(fetchData);
+onMounted(async () => {
+    await fetchData();
+});
 
 watch(
     () => [route.params.agencyId, route.params.id, route.params.version],
