@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: aqua, cupcake, bumblebee, emerald, corporate, synthwave, retro, cyberpunk, valentine, fantasy, winter, autumn, forest, business, acid, dracula, black, lofi, pastel, wireframe, night, coffee, lemonade    
+}
